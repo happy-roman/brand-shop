@@ -1,13 +1,13 @@
-<!--<template>-->
+<template>
+<div></div>
+</template>
 
-<!--</template>-->
+<script>
+export default {
+  name: 'Cart',
+};
+</script>
 
-<!--<script>-->
-<!--export default {-->
-<!--  name: 'Cart',-->
-<!--};-->
-<!--</script>-->
+<style scoped>
 
-<!--<style scoped>-->
-
-<!--</style>-->
+</style>
