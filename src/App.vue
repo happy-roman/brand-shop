@@ -8,18 +8,18 @@
 export default {
   data() {
     return {
-      urlApi: 'http://localhost:3000',
+      urlApi: 'http://localhost:5000',
+    };
+  },
+  provide() {
+    return {
+      getJson: this.getJson,
+      postJson: this.postJson,
+      putJson: this.putJson,
+      deleteJson: this.deleteJson,
     };
   },
   methods: {
-    // getJson(url) {
-    //   return fetch(url)
-    //     .then(result => result.json())
-    //     .catch((error) => {
-    //       // this.$refs.error.setError(error);
-    //       console.log(error);
-    //     });
-    // },
     getJson(url) {
       const requestUrl = this.urlApi + url;
       console.log(requestUrl);
@@ -28,7 +28,7 @@ export default {
       })
         .then(result => result.json())
         .catch((error) => {
-          console.log(error);
+          console.log(error || 'Поймали ошибку');
         });
     },
     postJson(url, data) {

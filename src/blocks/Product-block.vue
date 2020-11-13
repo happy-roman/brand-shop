@@ -20,7 +20,6 @@
                             <li>Worldwide delivery on all. Authorit tively morph next-generation
                                 innov tion with extensive models.</li>
                         </ul>
-
                     </div>
                 </div>
                 <div class="sales">
@@ -31,7 +30,6 @@
                             <li>Worldwide delivery on all. Authorit tively morph next-generation
                                 innov tion with extensive models.</li>
                         </ul>
-
                     </div>
                 </div>
                 <div class="quality">
@@ -42,9 +40,7 @@
                             <li>Worldwide delivery on all. Authorit tively morph next-generation
                                 innov tion with extensive models.</li>
                         </ul>
-
                     </div>
-
                 </div>
             </div>
         </div>
