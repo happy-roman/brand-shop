@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      urlApi: 'http://localhost:5000/',
+      urlApi: 'http://127.0.0.1:5000/',
     };
   },
   provide() {
@@ -22,9 +22,11 @@ export default {
   methods: {
     getJson(url) {
       return fetch(`${this.urlApi}${url}`, {
-        // mode: 'no-cors',
       })
-        .then(result => result.json())
+        .then((result) => {
+          if (!result.ok) throw Error(result.statusText);
+          return result.json();
+        })
         .catch((error) => {
           console.log(error || 'Поймали ошибку');
         });

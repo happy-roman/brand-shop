@@ -1,17 +1,20 @@
 const express = require('express');
-const cors = require('cors');
 const fs = require('fs');
+const cors = require('cors');
+const cartRouter = require('./cartRouter');
 
 const app = express();
-// const cartRouter = require('./cartRouter');
-
-app.use(cors);
+app.use(cors());
+app.use('/api/cart', cartRouter);
 app.use(express.json());
-// app.use('/api/cart', cartRouter);
+// app.all('*', (req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Origin, Content-Type, Accept');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+//   next();
+// });
 
 app.get('/api/products', (req, res) => {
-  res.set('Access-Control-Allow-Origin', '*');
-  res.set('Content-Type', 'application/json');
   if (req) {
     console.log('=== Req in ===\n==============');
   }

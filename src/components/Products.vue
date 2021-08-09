@@ -4,7 +4,7 @@
       ref="refref"
       v-for="item of filtered"
       :key="item.id_product"
-      :img="imgCatalog"
+      :img="item.img"
       :product="item">
     </product>
   </ul>

@@ -45,7 +45,7 @@
         </form>
       </div>
       <div class="header-block__right">
-<!--        <Cart/>-->
+        <Cart/>
         <button>My Account <i class="fas fa-sort-down"></i></button>
       </div>
     </div>
@@ -54,12 +54,12 @@
 
 <script>
 
-// import Cart from '@/components/Cart.vue';
+import Cart from '@/components/Cart.vue';
 
 export default {
   name: 'HeaderBlock',
   components: {
-    // Cart,
+    Cart,
   },
 };
 </script>

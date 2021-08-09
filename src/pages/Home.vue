@@ -4,13 +4,8 @@
     <navigation/>
     <promo/>
     <product-block/>
-<!--      <router-link to="/index"/>-->
-<!--      <router-link to="/single-page"/>-->
-<!--      <router-link to="user-cart"/>-->
-<!--      <router-link to="checkout"/>-->
-<!--      <router-view/>-->
     <subscribe/>
-      <footer-block/>
+    <footer-block/>
   </div>
 </template>
 

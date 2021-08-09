@@ -46,9 +46,14 @@ export default {
       cartItems: [],
       showCart: false,
       totalPrice: 0,
-      url: '/api/cart',
+      url: 'api/cart',
     };
   },
+  inject: [
+    'getJson',
+    'putJson',
+    'deleteJson',
+  ],
   methods: {
     addProduct(product) {
       const find = this.cartItems.find(el => el.id_product === product.id_product);
@@ -95,10 +100,9 @@ export default {
     },
   },
   mounted() {
-    this.$parent.$parent.$parent.getJson(this.url)
+    this.getJson(this.url)
       .then((data) => {
-        console.log(data);
-        data.forEach((el) => {
+        data.content.forEach((el) => {
           this.cartItems.push(el);
         });
       });

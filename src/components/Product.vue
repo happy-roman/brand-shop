@@ -7,7 +7,9 @@
                      Add to Cart
                 </button>
             </div>
-            <a href="single-page.html"><img :src="img" alt="prodImg" class="product-img"></a>
+          <router-link to="single-page">
+            <img :src="img" alt="prodImg" class="product-img">
+          </router-link>
             <div class="product-price">
                 <p class="product-name">{{product.product_name}}</p>
                 <p class="pink price">$<span>{{product.price}}</span></p>
