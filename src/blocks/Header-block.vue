@@ -2,10 +2,10 @@
   <header class="header-block">
     <div class="container header-block__flex">
       <div class="header-block__left">
-        <a href="index.html" class="logo">
-          <img class="logo__img" src="img/logo.png" alt="logo">
+        <router-link to="/" class="logo">
+          <img class="logo__img" src="/img/logo.png" alt="logo">
           <p>BRAN<span class="pink">D</span></p>
-        </a>
+        </router-link>
         <details>
           <summary>Browse</summary>
           <div class="browse-menu">
@@ -45,7 +45,7 @@
         </form>
       </div>
       <div class="header-block__right">
-        <Cart/>
+        <HeaderCart/>
         <button>My Account <i class="fas fa-sort-down"></i></button>
       </div>
     </div>
@@ -54,12 +54,12 @@
 
 <script>
 
-import Cart from '@/components/Cart.vue';
+import HeaderCart from '@/components/HeaderCart.vue';
 
 export default {
   name: 'HeaderBlock',
   components: {
-    Cart,
+    HeaderCart,
   },
 };
 </script>

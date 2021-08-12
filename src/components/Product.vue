@@ -2,17 +2,17 @@
     <li class="product-list">
         <div class="product-pic-price">
             <div class="mask">
-                <button class="shake-top buy-btn" @click="cartAPI.addProduct(product)">
+                <button class="shake-top buy-btn" @click="add">
                     <img src="img/Form_1_copy.svg" alt="cart">
                      Add to Cart
                 </button>
             </div>
-          <router-link to="single-page">
-            <img :src="img" alt="prodImg" class="product-img">
+          <router-link :to="getProductLink()">
+            <img :src="product.img" alt="prodImg" class="product-img">
           </router-link>
             <div class="product-price">
-                <p class="product-name">{{product.product_name}}</p>
-                <p class="pink price">$<span>{{product.price}}</span></p>
+                <p class="product-name">{{ product.product_name }}</p>
+                <p class="pink price">$<span>{{ product.price }}</span></p>
             </div>
         </div>
     </li>
@@ -21,11 +21,18 @@
 <script>
 export default {
   name: 'Product',
-  props: ['product', 'img'],
+  props: ['product'],
   data() {
     return {
-      cartAPI: this.$root.$refs.cart,
     };
+  },
+  methods: {
+    getProductLink() {
+      return { name: 'goods', params: { id: this.product.id_product } };
+    },
+    add() {
+      this.$store.dispatch('addToCart', this.product);
+    },
   },
 };
 </script>

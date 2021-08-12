@@ -3,7 +3,7 @@
         <div class="footer-top container">
             <div class="brend-text">
                 <a href="#" class="logo footer-logo">
-                    <img class="logo__img" src="img/logo.png" alt="logo">
+                    <img class="logo__img" src="/img/logo.png" alt="logo">
                     <p>BRAN<span class="pink">D</span></p>
                 </a>
                 <p class="text-footer">Objectively transition extensive data rather than cross

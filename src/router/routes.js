@@ -1,13 +1,13 @@
-import Home from '@/pages/Home.vue';
-import UserCart from '@/pages/UserCart.vue';
-import SinglePage from '@/pages/SinglePage.vue';
-import Product from '@/components/Product.vue';
+import HomePage from '@/pages/HomePage.vue';
+import UserCart from '@/pages/UserCartPage.vue';
+import ProductPage from '@/pages/ProductPage.vue';
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home,
+    component: HomePage,
+    alias: '/home',
   },
   {
     path: '/user-cart',
@@ -15,14 +15,11 @@ const routes = [
     component: UserCart,
   },
   {
-    path: '/single-page',
-    name: 'single-page',
-    component: SinglePage,
+    path: '/goods/:id',
+    name: 'goods',
+    component: ProductPage,
+    props: true,
   },
-  {
-    path: 'product',
-    name: 'product',
-    component: Product,
-  },
+  { path: '/:catchAll(.*)', redirect: '/home' },
 ];
 export default routes;

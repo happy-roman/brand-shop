@@ -5,14 +5,8 @@ const cartRouter = require('./cartRouter');
 
 const app = express();
 app.use(cors());
-app.use('/api/cart', cartRouter);
 app.use(express.json());
-// app.all('*', (req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, Origin, Content-Type, Accept');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-//   next();
-// });
+app.use('/api/cart', cartRouter);
 
 app.get('/api/products', (req, res) => {
   if (req) {
@@ -23,6 +17,17 @@ app.get('/api/products', (req, res) => {
       res.send(JSON.stringify({ result: 0, text: err }));
     }
     res.send(data);
+  });
+});
+app.get('/api/products/:id', (req, res) => {
+  if (req) {
+    console.log('=== Req Prod==\n==============');
+  }
+  fs.readFile('/brand-shop/src/server/db/catalog.json', 'utf-8', (err, data) => {
+    if (err) {
+      res.send(JSON.stringify({ result: 0, text: err }));
+    }
+    res.send(JSON.parse(data).find(el => el.id_product === parseInt(req.params.id, 10)));
   });
 });
 

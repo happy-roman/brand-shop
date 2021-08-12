@@ -1,6 +1,6 @@
 <template>
-    <div class="cart-block" >
-        <a href="#"><img class="cart" src="img/cart.svg" alt="cart"></a>
+    <div class="cart-block">
+        <a href="#"><img class="cart" src="/img/cart.svg" alt="cart"></a>
         <div class="cart-open">
             <div v-if="!cartItems.length" >
                 <p class="cart-open__empty">Your cart is empty</p>
@@ -17,7 +17,7 @@
                         </cartItems>
                         <div>
                             <p>total</p>
-                            <p>$ {{totalPrice}}</p>
+                            <p>$ {{ total }}</p>
                         </div>
                     </div>
                 </div>
@@ -43,37 +43,11 @@ export default {
   data() {
     return {
       imgCart: 'https://placehold.it/72x85',
-      cartItems: [],
+      cartItems: this.$store.state.userCart,
       showCart: false,
-      totalPrice: 0,
-      url: 'api/cart',
     };
   },
-  inject: [
-    'getJson',
-    'putJson',
-    'deleteJson',
-  ],
   methods: {
-    addProduct(product) {
-      const find = this.cartItems.find(el => el.id_product === product.id_product);
-      if (find) {
-        this.$parent.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
-          .then((data) => {
-            if (data.result === 1) {
-              find.quantity += 1;
-            }
-          });
-      } else {
-        const prod = Object.assign({ quantity: 1 }, product);
-        this.$parent.postJson('/api/cart', prod)
-          .then((data) => {
-            if (data.result === 1) {
-              this.cartItems.push(prod);
-            }
-          });
-      }
-    },
     remove(item) {
       if (item.quantity > 1) {
         this.$parent.putJson(`/api/cart/${item.id_product}`, { quantity: -1 })
@@ -91,24 +65,15 @@ export default {
           });
       }
     },
+  },
+  computed: {
     total() {
-      let total = this.totalPrice;
+      let total = 0;
       this.cartItems.forEach((el) => {
         total += (+el.price * el.quantity);
       });
-      this.totalPrice = total.toFixed(2);
+      return total.toFixed(2);
     },
-  },
-  mounted() {
-    this.getJson(this.url)
-      .then((data) => {
-        data.content.forEach((el) => {
-          this.cartItems.push(el);
-        });
-      });
-  },
-  beforeUpdate() {
-    this.total();
   },
 };
 </script>
