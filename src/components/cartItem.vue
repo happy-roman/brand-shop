@@ -11,7 +11,7 @@
             </p>
             <p class="pink">{{cartItem.quantity}}  x   $ {{cartItem.price}}</p>
         </div>
-        <button class="cart-cancel" @click="$emit('remove', cartItem)">
+        <button class="cart-cancel" @click="remove">
             <i class="fas fa-times-circle"></i>
         </button>
     </div>
@@ -21,8 +21,10 @@
 export default {
   name: 'cartItems',
   props: ['cartItem', 'img'],
-  updated() {
-    this.$parent.total();
+  methods: {
+    remove() {
+      this.$store.dispatch('removeFromCart', this.cartItem);
+    },
   },
 };
 </script>

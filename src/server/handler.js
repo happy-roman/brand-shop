@@ -11,14 +11,13 @@ const actions = {
 const handler = (req, res, action, file) => {
   fs.readFile(file, 'utf-8', (err, data) => {
     if (err) {
-      res.sendStatus(404, JSON.stringify({ result: 0, text: err }));
+      res.sendStatus(404, JSON.stringify({ result: 0, text: `Read file err handler\n${err}` }));
     } else {
       const { name, newCart } = actions[action](JSON.parse(data), req);
       fs.writeFile(file, newCart, (error) => {
         if (error) {
           res.send('{"result": 0}');
         } else {
-          console.log(name);
           logger(name, action);
           res.send('{"result": 1}');
         }

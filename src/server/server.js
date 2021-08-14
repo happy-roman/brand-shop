@@ -6,7 +6,7 @@ const cartRouter = require('./cartRouter');
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use('/api/cart', cartRouter);
+app.use('/api/cart', cors({ Methods: 'GET, POST, PUT, DELETE' }), cartRouter);
 
 app.get('/api/products', (req, res) => {
   if (req) {

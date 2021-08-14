@@ -3,13 +3,13 @@
     <div>
       <section class="single-page-slider">
         <div class="slider-nav"><i class="fas fa-chevron-left"></i></div>
-        <img :src="prod.img" alt="img">
+        <img :src="product.img" alt="img">
         <div class="slider-nav"><i class="fas fa-chevron-right"></i></div>
       </section>
       <section class="description-product container">
         <div class="decripsion">
           <p class="pink">WOMEN COLLECTION</p>
-          <p>{{ prod.product_name }}</p>
+          <p>{{ product.product_name }}</p>
           <p>Compellingly actualize fully researched processes before proactive outsourcing.
             Progressively syndicate collaborative architectures before cutting-edge services.
             Completely visualize parallel core competencies rather than exceptional&nbsp;portals.
@@ -22,7 +22,7 @@
               <p>DESIGNER: <span>BINBURHAN</span></p>
             </div>
           </div>
-          <p class="pink price-product price"> {{ prod.price }}</p>
+          <p class="pink price-product price">$ {{ product.price }}</p>
           <div class="select-product">
             <div>
               <p>CHOOSE COLOR</p>
@@ -53,7 +53,7 @@
               </select>
             </div>
           </div>
-          <button name="add-to-cart" class="pink" >
+          <button name="add-to-cart" class="pink" @click="addToCart(product)">
             <img src="/img/pink-cart.svg" alt="img"> Add to cart
           </button>
         </div>
@@ -63,31 +63,31 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 
 export default {
-  name: 'single-page',
+  name: 'product-page',
   data() {
     return {
-      prod: {},
+      product: {},
     };
   },
-  method: {
-    add() {
-      this.$store.dispatch('addToCart', this.product);
-    },
+  methods: {
+    ...mapActions(['addToCart']),
   },
   mounted() {
     const find = this.$store.state.products.find(
       el => el.id_product === parseInt(this.$route.params.id, 10),
     );
     if (find) {
-      this.prod = find;
+      this.product = find;
     } else {
       fetch(`http://localhost:5000/api/products/${this.$route.params.id}`)
         .then(res => res.json())
         .then((data) => {
-          this.prod = data;
+          this.product = data;
         })
+        .then(console.log(this.product))
         .catch(err => console.log(err || 'Поймали ошибку'));
     }
   },
