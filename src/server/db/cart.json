@@ -1,5 +1,13 @@
 {
     "amount": 0,
     "countGoods": 0,
-    "content": []
+    "content": [
+        {
+            "quantity": 17,
+            "id_product": 1,
+            "product_name": "Mango  People  T-shirt",
+            "price": "52.00",
+            "img": "/img/product_img_.jpg"
+        }
+    ]
 }

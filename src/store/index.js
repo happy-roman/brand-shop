@@ -62,13 +62,13 @@ export default new Vuex.Store({
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ quantity: 1 }),
+          body: JSON.stringify({ quantity: product.quantity }),
         })
           .then(result => result.json())
           .then((data) => {
             if (data.result === 1) {
               // eslint-disable-next-line no-unused-expressions
-              find.quantity += 1;
+              find.quantity += product.quantity;
             }
           })
           .catch((error) => {

@@ -31,7 +31,6 @@
 </template>
 
 <script>
-
 import cartItems from '@/components/cartItem.vue';
 
 export default {
@@ -42,11 +41,9 @@ export default {
   data() {
     return {
       imgCart: 'https://placehold.it/72x85',
-      cartItems: [],
       showCart: false,
     };
   },
-
   computed: {
     total() {
       let total = 0;
@@ -58,8 +55,3 @@ export default {
   },
 };
 </script>
-
-
-<style scoped>
-
-</style>

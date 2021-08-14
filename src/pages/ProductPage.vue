@@ -48,12 +48,12 @@
             </div>
             <div>
               <p>QUANTITY</p>
-              <select id="quantity" class="selector-product">
+              <select id="quantity" class="selector-product" name="quantity" v-model="quantity">
                 <option v-for="i of 10" :key=i>{{ i }}</option>
               </select>
             </div>
           </div>
-          <button name="add-to-cart" class="pink" @click="addToCart(product)">
+          <button name="add-to-cart" class="pink" @click="add">
             <img src="/img/pink-cart.svg" alt="img"> Add to cart
           </button>
         </div>
@@ -70,10 +70,21 @@ export default {
   data() {
     return {
       product: {},
+      quantity: '',
     };
   },
   methods: {
     ...mapActions(['addToCart']),
+    add() {
+      if (this.quantity) {
+        this.product.quantity = parseInt(this.quantity, 10);
+        this.addToCart(this.product);
+      } else {
+        console.log('enter quanity');
+      }
+    },
+  },
+  computed: {
   },
   mounted() {
     const find = this.$store.state.products.find(
@@ -84,10 +95,7 @@ export default {
     } else {
       fetch(`http://localhost:5000/api/products/${this.$route.params.id}`)
         .then(res => res.json())
-        .then((data) => {
-          this.product = data;
-        })
-        .then(console.log(this.product))
+        .then((data) => { this.product = data; })
         .catch(err => console.log(err || 'Поймали ошибку'));
     }
   },

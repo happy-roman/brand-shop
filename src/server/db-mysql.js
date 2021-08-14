@@ -1,8 +1,9 @@
 // const mysql = require('mysql2');
+// const fs = require('fs');
 //
 // const pool = mysql.createPool({
 //   connectionLimit: 10,
-//   host: 'localhost',
+//   host: '127.0.0.1',
 //   port: 3306,
 //   user: 'root',
 //   database: 'brand-shop',
@@ -20,15 +21,16 @@
 //         pool.query(
 //           `INSERT INTO goods (id_product, product_name, price, img)
 //            VALUES (${el.id_product}, ${el.product_name}, ${el.price}, ${el.img})`,
-//           error => console.log(error));
+//           error => console.log(error),
+//         );
 //       }
 //     }
 //   });
 // }
 //
-// function getmysql() {
+// function getMysql() {
 //   let a = '';
-//   pool.query('SELECT * FROM goods', ((err, result) => {
+//   pool.query('SELECT * FROM \'goods\'', ((err, result) => {
 //     if (err) {
 //       console.log(err);
 //     }
