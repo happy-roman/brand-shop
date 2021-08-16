@@ -1,7 +1,7 @@
 <template>
   <ul class="products product-pic">
     <product
-      v-for="item of this.$store.state.products"
+      v-for="item of this.products"
       :key="item.id_product"
       :product="item">
     </product>
@@ -11,6 +11,7 @@
 <script>
 
 import product from '@/components/Product.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Products',
@@ -21,6 +22,9 @@ export default {
     return {
       imgCatalog: 'https://placehold.it/260x280',
     };
+  },
+  computed: {
+    ...mapGetters('products', ['products']),
   },
 };
 </script>

@@ -2,14 +2,14 @@
   <div class="cart-block">
     <a href="#"><img class="cart" src="/img/cart.svg" alt="cart"></a>
     <div class="cart-open">
-      <div v-if="this.$store.state.userCart.length === 0">
+      <div v-if="this.userCart.length === 0">
         <p class="cart-open__empty">Your cart is empty</p>
       </div>
       <div v-else>
         <div class="cart-block">
           <div class="cart-product">
             <cartItems class="cart-item"
-                       v-for="item of this.$store.state.userCart"
+                       v-for="item of this.userCart"
                        :key="item.id_product"
                        :cart-item="item"
                        :img="imgCart">
@@ -32,6 +32,7 @@
 
 <script>
 import cartItems from '@/components/cartItem.vue';
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'header-cart',
@@ -45,9 +46,10 @@ export default {
     };
   },
   computed: {
+    ...mapGetters('cart', ['userCart']),
     total() {
       let total = 0;
-      this.$store.state.userCart.forEach((el) => {
+      this.userCart.forEach((el) => {
         total += (+el.price * el.quantity);
       });
       return total.toFixed(2);

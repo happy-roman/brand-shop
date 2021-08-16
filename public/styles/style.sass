@@ -14,7 +14,6 @@ li
 button:focus
   outline: none
 
-
 .shake-top
   -webkit-animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2s infinite both
   animation: shake-top 2s cubic-bezier(0.455, 0.030, 0.515, 0.955) 2s infinite both
@@ -927,13 +926,17 @@ button:focus
 .slider-nav
   width: 47px
   height: 47px
-  background: url("../img/Rounded_Rectangle_6.svg")
   line-height: 47px
   color: #ffffff
   font-size: 24px
   font-weight: 400
   text-align: center
   opacity: 0.5
+  border: none
+  background: #2a2a2a
+  &:hover
+    background: #101010
+    cursor: pointer
 
 .decripsion
   display: flex

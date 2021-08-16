@@ -21,10 +21,6 @@ export default {
     Subscribe,
     FooterBlock,
   },
-  mounted() {
-    this.$store.dispatch('getProducts');
-    this.$store.dispatch('getCart');
-  },
 };
 </script>
 

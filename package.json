@@ -1,6 +1,6 @@
 {
   "name": "brand-shop",
-  "version": "0.1.0",
+  "version": "0.5.57",
   "private": true,
   "scripts": {
     "front": "vue-cli-service serve",

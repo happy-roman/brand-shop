@@ -23,7 +23,7 @@ export default {
   props: ['cartItem', 'img'],
   methods: {
     remove() {
-      this.$store.dispatch('removeFromCart', this.cartItem);
+      this.$store.dispatch('cart/removeFromCart', this.cartItem);
     },
   },
 };

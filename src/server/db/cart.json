@@ -3,8 +3,25 @@
     "countGoods": 0,
     "content": [
         {
-            "quantity": 17,
+            "quantity": 9,
             "id_product": 1,
+            "category_name": "man",
+            "featured": true,
+            "hot_deals": true,
+            "sizes": [
+                "s",
+                "xs",
+                "m",
+                "l",
+                "xl"
+            ],
+            "colors": [
+                "red",
+                "white",
+                "green"
+            ],
+            "material": "cotton",
+            "designer": "roman",
             "product_name": "Mango  People  T-shirt",
             "price": "52.00",
             "img": "/img/product_img_.jpg"

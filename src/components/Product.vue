@@ -32,7 +32,7 @@ export default {
       return { name: 'goods', params: { id: this.product.id_product } };
     },
     add() {
-      this.$store.dispatch('addToCart', this.product);
+      this.$store.dispatch('cart/addToCart', this.product);
     },
   },
 };
