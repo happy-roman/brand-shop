@@ -3,7 +3,28 @@
     "countGoods": 0,
     "content": [
         {
-            "quantity": 9,
+            "quantity": 5,
+            "id_product": 10,
+            "category_name": "women",
+            "featured": true,
+            "hot_deals": true,
+            "sizes": [
+                "s",
+                "xs",
+                "m"
+            ],
+            "colors": [
+                "red",
+                "white"
+            ],
+            "material": "wool",
+            "designer": "BINBURHAN",
+            "product_name": "Mango  People  T-shirt",
+            "price": "52.00",
+            "img": "/img/product_img_.jpg"
+        },
+        {
+            "quantity": 1,
             "id_product": 1,
             "category_name": "man",
             "featured": true,
@@ -22,6 +43,27 @@
             ],
             "material": "cotton",
             "designer": "roman",
+            "product_name": "Mango  People  T-shirt",
+            "price": "52.00",
+            "img": "/img/product_img_.jpg"
+        },
+        {
+            "quantity": 7,
+            "id_product": 6,
+            "category_name": "kids",
+            "featured": false,
+            "hot_deals": true,
+            "sizes": [
+                "s",
+                "xs",
+                "m"
+            ],
+            "colors": [
+                "red",
+                "white"
+            ],
+            "material": "wool",
+            "designer": "BINBURHAN",
             "product_name": "Mango  People  T-shirt",
             "price": "52.00",
             "img": "/img/product_img_.jpg"

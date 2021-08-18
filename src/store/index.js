@@ -13,6 +13,16 @@ const store = new Vuex.Store({
   state() {
     return {
       userAuth: false,
+      getFetch(url, init = null) {
+        return fetch(url, init)
+          .then((result) => {
+            if (!result.ok) throw Error(result.statusText);
+            return result.json();
+          })
+          .catch((error) => {
+            console.log(error || 'Поймали ошибку');
+          });
+      },
     };
   },
   mutations: {

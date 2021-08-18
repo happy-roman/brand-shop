@@ -486,6 +486,7 @@ button:focus {
 }
 .product-pic-price {
   position: relative;
+  transition: all 0.3s;
 }
 .product-pic-price:hover .mask {
   display: flex;

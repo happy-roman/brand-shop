@@ -19,16 +19,9 @@ const productsStore = {
   },
   actions: {
     getProducts(context, url = 'http://localhost:5000/api/products') {
-      fetch(url)
-        .then((data) => {
-          if (!data.ok) throw Error(data.statusText);
-          return data.json();
-        })
+      context.rootState.getFetch(url)
         .then((data) => {
           context.commit('getProducts', data);
-        })
-        .catch((error) => {
-          console.log(error || 'Поймали ошибку');
         });
     },
   },
