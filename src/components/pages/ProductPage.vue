@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div v-if="product">
       <section class="single-page-slider">
         <button class="slider-nav"><i class="fas fa-chevron-left"></i></button>
         <img :src="product.img" alt="img">
@@ -19,7 +19,7 @@
               <p>MATERIAL: <span>{{ product.material }}</span></p>
             </div>
             <div>
-              <p>DESIGNER: <span>{{ product.designer}}</span></p>
+              <p>DESIGNER: <span>{{ product.designer }}</span></p>
             </div>
           </div>
           <p class="pink price-product price">$ {{ product.price }}</p>
@@ -49,6 +49,10 @@
         </div>
       </section>
     </div>
+    <div v-else class="product-not-found">
+      <h3>Product not found</h3>
+      <router-link to="/" class="product-not-found-link">You can back to main page</router-link>
+    </div>
   </div>
 </template>
 
@@ -59,7 +63,7 @@ export default {
   name: 'product-page',
   data() {
     return {
-      product: {},
+      product: '',
       quantity: '',
     };
   },
@@ -79,15 +83,19 @@ export default {
   },
   mounted() {
     const find = this.products.find(
-      el => el.id_product === parseInt(this.$route.params.id, 10),
+      el => el.id_product === Number(this.$route.params.id),
     );
     if (find) {
       this.product = find;
     } else {
       fetch(`http://localhost:5000/api/products/${this.$route.params.id}`)
         .then(res => res.json())
-        .then((data) => { this.product = data; })
-        .catch(err => console.log(err || 'Поймали ошибку'));
+        .then((data) => {
+          this.product = data;
+        })
+        .catch((err) => {
+          console.log(err || 'Поймали ошибку');
+        });
     }
   },
   watch: {
@@ -99,3 +107,15 @@ export default {
 };
 
 </script>
+<style lang="sass">
+.product-not-found
+  margin: 30px auto
+  text-align: center
+  &-link
+    display: block
+    text-decoration: none
+    color: #6f6e6e
+    margin-top: 50px
+    &:hover
+      color: #f16d7f
+</style>

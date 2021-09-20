@@ -1,260 +1,194 @@
 [
   {
     "id_product": 1,
-    "category_name": "man",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m",
-      "l",
-      "xl"
-    ],
-    "colors": [
-      "red",
-      "white",
-      "green"
-    ],
-    "material": "cotton",
-    "designer": "roman",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img":"",
+    "small_img": ""
   },
   {
     "id_product": 2,
-    "category_name": "kids",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": false,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m"
-    ],
-    "colors": [
-      "red",
-      "white"
-    ],
-    "material": "cotton",
-    "designer": "roman",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 3,
-    "category_name": "man",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m",
-      "l",
-      "xl"
-    ],
-    "colors": [
-      "red",
-      "white",
-      "green"
-    ],
-    "material": "cotton",
-    "designer": "roman",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 4,
-    "category_name": "kids",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": false,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m"
-    ],
-    "colors": [
-      "red",
-      "white"
-    ],
-    "material": "cotton",
-    "designer": "roman",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 5,
-    "category_name": "man",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m",
-      "l",
-      "xl"
-    ],
-    "colors": [
-      "red",
-      "white",
-      "green"
-    ],
-    "material": "cotton",
-    "designer": "roman",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 6,
-    "category_name": "kids",
+    "id_category": "1",
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": false,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m"
-    ],
-    "colors": [
-      "red",
-      "white"
-    ],
-    "material": "wool",
-    "designer": "BINBURHAN",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 7,
-    "category_name": "accoseriese",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m",
-      "l",
-      "xl"
-    ],
-    "colors": [
-      "red",
-      "white",
-      "green"
-    ],
-    "material": "wool",
-    "designer": "BINBURHAN",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 8,
-    "category_name": "women",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m"
-    ],
-    "colors": [
-      "red",
-      "white"
-    ],
-    "material": "wool",
-    "designer": "BINBURHAN",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 9,
-    "category_name": "man",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m",
-      "l",
-      "xl"
-    ],
-    "colors": [
-      "red",
-      "white",
-      "green"
-    ],
-    "material": "wool",
-    "designer": "BINBURHAN",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 10,
-    "category_name": "women",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m"
-    ],
-    "colors": [
-      "red",
-      "white"
-    ],
-    "material": "wool",
-    "designer": "BINBURHAN",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 11,
-    "category_name": "accoseriese",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m",
-      "l",
-      "xl"
-    ],
-    "colors": [
-      "red",
-      "white",
-      "green"
-    ],
-    "material": "wool",
-    "designer": "BINBURHAN",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   },
   {
     "id_product": 12,
-    "category_name": "women",
+    "id_category": 1,
+    "id_sub_category": 2,
+    "id_sizes": 1,
+    "id_colors": 2,
+    "id_material": 1,
+    "id_designer": 2,
     "featured": true,
     "hot_deals": true,
-    "sizes": [
-      "s",
-      "xs",
-      "m"
-    ],
-    "colors": [
-      "red",
-      "white"
-    ],
-    "material": "wool",
-    "designer": "BINBURHAN",
     "product_name": "Mango  People  T-shirt",
     "price": "52.00",
-    "img": "/img/product_img_.jpg"
+    "img": "/img/product_img_.jpg",
+    "full_img": "",
+    "small_img": ""
   }
 ]

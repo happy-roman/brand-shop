@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import Promo from '@/blocks/Promo.vue';
-import Category from '@/blocks/Category.vue';
-import ProductBlock from '@/blocks/Product-block.vue';
+import Promo from '@/components/blocks/Promo.vue';
+import Category from '@/components/blocks/Category.vue';
+import ProductBlock from '@/components/blocks/Product-block.vue';
 
 export default {
   name: 'Index',

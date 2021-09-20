@@ -232,7 +232,7 @@ button:focus
       border: 1px solid $color-brand
       color: $color-brand
 
-.header-block__right>button
+.header-block__right summary
   display: flex
   justify-content: center
   align-items: center
@@ -247,6 +247,13 @@ button:focus
   &>i
     padding: 0 0 5px 8px
     font-size: 14px
+  &::-webkit-details-marker
+    display: none
+  &::after
+    content: '\25BC'
+    padding-left: 8px
+.brows-account-menu
+  position: absolute
 
 .nav-top
   background-color: #ffffff

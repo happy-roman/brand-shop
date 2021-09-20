@@ -1,6 +1,9 @@
-import HomePage from '@/pages/HomePage.vue';
-import UserCart from '@/pages/UserCartPage.vue';
-import ProductPage from '@/pages/ProductPage.vue';
+import HomePage from '@/components/pages/HomePage.vue';
+import UserCart from '@/components/pages/UserCartPage.vue';
+import ProductPage from '@/components/pages/ProductPage.vue';
+import AdminProducts from '@/components/blocks/AdminProducts.vue';
+import AdminPage from '@/components/pages/AdminPage.vue';
+import AdminUsers from '@/components/blocks/AdminUsers.vue';
 
 const routes = [
   {
@@ -19,6 +22,23 @@ const routes = [
     name: 'goods',
     component: ProductPage,
     props: true,
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: AdminPage,
+    children: [
+      {
+        path: 'users',
+        component: AdminUsers,
+        name: 'adminUsers',
+      },
+      {
+        path: 'products',
+        component: AdminProducts,
+        name: 'adminProducts',
+      },
+    ],
   },
   { path: '/:catchAll(.*)', redirect: '/home' },
 ];

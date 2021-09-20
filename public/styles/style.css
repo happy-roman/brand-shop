@@ -276,7 +276,7 @@ button:focus {
   color: #f16d7f;
 }
 
-.header-block__right > button {
+.header-block__right summary {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,13 +286,24 @@ button:focus {
   color: #ffffff;
   border: none;
 }
-.header-block__right > button:hover {
+.header-block__right summary:hover {
   cursor: pointer;
   box-shadow: 0 1px 2px #ff7ff8;
 }
-.header-block__right > button > i {
+.header-block__right summary > i {
   padding: 0 0 5px 8px;
   font-size: 14px;
+}
+.header-block__right summary::-webkit-details-marker {
+  display: none;
+}
+.header-block__right summary::after {
+  content: "▼";
+  padding-left: 8px;
+}
+
+.brows-account-menu {
+  position: absolute;
 }
 
 .nav-top {

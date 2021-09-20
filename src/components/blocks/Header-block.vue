@@ -46,7 +46,31 @@
       </div>
       <div class="header-block__right">
         <HeaderCart/>
-        <button>My Account <i class="fas fa-sort-down"></i></button>
+        <details>
+          <summary>My Account</summary>
+          <div class="brows-account-menu">
+            <div v-if="$store.state.userAuth">
+              <div>
+                <router-link :to=adminPageLink class="account-menu-link">Admin page</router-link>
+              </div>
+              <div>
+                <router-link :to=adminUsersLink class="account-menu-link">Users</router-link>
+              </div>
+              <div>
+                <router-link :to=adminProdLink class="account-menu-link">Products</router-link>
+              </div>
+              <button @click="accountShow" class="brows-account-menu-btn">Log Out</button>
+            </div>
+            <div v-else>
+              <div>
+                <button @click="accountShow" class="brows-account-menu-btn">Log in</button>
+              </div>
+              <div>
+                <button class="brows-account-menu-btn">Register</button>
+              </div>
+            </div>
+          </div>
+        </details>
       </div>
     </div>
   </header>
@@ -54,12 +78,57 @@
 
 <script>
 
-import HeaderCart from '@/components/HeaderCart.vue';
+import HeaderCart from '@/components/blocks/HeaderCart.vue';
 
 export default {
   name: 'HeaderBlock',
   components: {
     HeaderCart,
   },
+  data() {
+    return {
+      auth: this.$store.getters.getUserAuth,
+    };
+  },
+  computed: {
+    adminPageLink() {
+      return { name: 'admin' };
+    },
+    adminProdLink() {
+      return { name: 'adminProducts' };
+    },
+    adminUsersLink() {
+      return { name: 'adminUsers' };
+    },
+  },
+  methods: {
+    accountShow() {
+      this.$store.dispatch('toggleAuth');
+    },
+  },
 };
 </script>
+<style lang="sass">
+.brows-account-menu
+  padding: 0 15px
+  border: #ececec 1px solid
+  border-radius: 3px
+  background: #fff
+  width: 130px
+  box-sizing: border-box
+  text-align: center
+.account-menu-link, .brows-account-menu-btn
+  display: block
+  margin: 10px auto
+  color: #222222
+  border: #ececec 1px solid
+  border-radius: 3px
+  padding: 5px
+  cursor: pointer
+  &:hover
+    background: #f16d7f
+    color: #fff
+    box-shadow: #ffabf8 1px 1px
+
+
+</style>

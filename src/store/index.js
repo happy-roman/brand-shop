@@ -13,6 +13,7 @@ const store = new Vuex.Store({
   state() {
     return {
       userAuth: false,
+      isAdmin: false,
       getFetch(url, init = null) {
         return fetch(url, init)
           .then((result) => {
@@ -26,10 +27,19 @@ const store = new Vuex.Store({
     };
   },
   mutations: {
+    userAuth(state) {
+      state.userAuth = !state.userAuth;
+    },
   },
   actions: {
+    toggleAuth(context) {
+      context.commit('userAuth');
+    },
   },
   getters: {
+    getUserAuth(state) {
+      return state.userAuth;
+    },
   },
 });
 

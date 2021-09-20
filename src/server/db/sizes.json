@@ -1,0 +1,26 @@
+[
+  {
+    "id_size": 1,
+    "size": "xs"
+  },
+  {
+    "id_size": 2,
+    "size": "s"
+  },
+  {
+    "id_size": 3,
+    "size": "m"
+  },
+  {
+    "id_size": 4,
+    "size": "l"
+  },
+  {
+    "id_size": 5,
+    "size": "xl"
+  },
+  {
+    "id_size": 6,
+    "size": "xxl"
+  }
+]

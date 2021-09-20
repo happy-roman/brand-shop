@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import products from '@/components/Products.vue';
+import products from '@/components/blocks/Products.vue';
 
 export default {
   name: 'ProductBlock',
