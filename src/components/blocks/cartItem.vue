@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="#"><img :src="img" alt="img"></a>
+        <a href="#"><img :src="img" alt="img" class="cart-img-small"></a>
         <div>
             <a href="#">{{cartItem.product_name}}</a>
             <p><i class="fas fa-star"></i>
@@ -28,3 +28,8 @@ export default {
   },
 };
 </script>
+<style lang="sass">
+.cart-img-small
+  width: 72px
+  height: 85px
+</style>

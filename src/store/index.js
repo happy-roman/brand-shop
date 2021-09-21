@@ -21,7 +21,7 @@ const store = new Vuex.Store({
             return result.json();
           })
           .catch((error) => {
-            console.log(error || 'Поймали ошибку');
+            throw Error(error || 'Поймали ошибку');
           });
       },
     };

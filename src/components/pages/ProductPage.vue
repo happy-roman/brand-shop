@@ -74,7 +74,7 @@ export default {
         this.product.quantity = parseInt(this.quantity, 10);
         this.addToCart(this.product);
       } else {
-        console.log('enter quantity');
+        throw Error('enter quantity');
       }
     },
   },
@@ -94,7 +94,7 @@ export default {
           this.product = data;
         })
         .catch((err) => {
-          console.log(err || 'Поймали ошибку');
+          throw Error(err || 'Поймали ошибку');
         });
     }
   },

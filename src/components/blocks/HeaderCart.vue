@@ -12,7 +12,7 @@
                        v-for="item of this.userCart"
                        :key="item.id_product"
                        :cart-item="item"
-                       :img="imgCart">
+                       :img="item.img || imgCart">
             </cartItems>
             <div>
               <p>total</p>

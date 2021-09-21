@@ -42,7 +42,7 @@
                                 <li><a href="#">Sweaters/Knits</a></li>
                                 <li><a href="#">Jackets/Coats</a></li>
                             </ul>
-                            <img src="img/Layer_42.png" alt="img">
+                            <img src="/img/Layer_42.png" alt="img">
                         </div>
                     </div>
                 </li>
