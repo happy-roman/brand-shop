@@ -108,27 +108,28 @@ export default {
   },
 };
 </script>
-<style lang="sass">
-.brows-account-menu
-  padding: 0 15px
-  border: #ececec 1px solid
-  border-radius: 3px
-  background: #fff
-  width: 130px
-  box-sizing: border-box
-  text-align: center
-.account-menu-link, .brows-account-menu-btn
-  display: block
-  margin: 10px auto
-  color: #222222
-  border: #ececec 1px solid
-  border-radius: 3px
-  padding: 5px
-  cursor: pointer
-  &:hover
-    background: #f16d7f
-    color: #fff
-    box-shadow: #ffabf8 1px 1px
-
-
+<style lang="css">
+.brows-account-menu {
+  padding: 0 15px;
+  border: #ececec 1px solid;
+  border-radius: 3px;
+  background: #fff;
+  width: 130px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.account-menu-link, .brows-account-menu-btn {
+  display: block;
+  margin: 10px auto;
+  color: #222222;
+  border: #ececec 1px solid;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+}
+.account-menu-link, .brows-account-menu-btn:hover {
+    background: #f16d7f;
+    color: #fff;
+    box-shadow: #ffabf8 1px 1px;
+}
 </style>

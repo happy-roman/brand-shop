@@ -28,8 +28,8 @@ export default {
 };
 </script>
 
-<style scoped lang="sass">
-.admin-page
+<style scoped lang="css">
+/* .admin-page
   margin-top: 50px
   text-align: center
 .admin-links
@@ -55,6 +55,6 @@ export default {
 .admin-text
   margin: 20px
   font-size: 20px
-  color: #4d4d4d
+  color: #4d4d4d */
 
 </style>

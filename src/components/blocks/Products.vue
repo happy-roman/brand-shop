@@ -10,8 +10,8 @@
 
 <script>
 
-import product from '@/components/blocks/Product.vue';
 import { mapGetters } from 'vuex';
+import product from '@/components/blocks/Product.vue';
 
 export default {
   name: 'Products',

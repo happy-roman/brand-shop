@@ -107,15 +107,18 @@ export default {
 };
 
 </script>
-<style lang="sass">
-.product-not-found
-  margin: 30px auto
-  text-align: center
-  &-link
-    display: block
-    text-decoration: none
-    color: #6f6e6e
-    margin-top: 50px
-    &:hover
-      color: #f16d7f
+<style lang="css">
+.product-not-found{
+  margin: 30px auto;
+  text-align: center;
+}
+.product-not-found-link{
+    display: block;
+    text-decoration: none;
+    color: #6f6e6e;
+    margin-top: 50px;
+}
+.product-not-found-link:hover{
+      color: #f16d7f;
+}
 </style>

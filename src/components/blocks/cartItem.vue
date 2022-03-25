@@ -28,8 +28,9 @@ export default {
   },
 };
 </script>
-<style lang="sass">
-.cart-img-small
-  width: 72px
-  height: 85px
+<style lang="css">
+.cart-img-small{
+  width: 72px;
+  height: 85px;
+}
 </style>
