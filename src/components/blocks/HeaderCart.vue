@@ -31,8 +31,9 @@
 </template>
 
 <script>
-import cartItems from '@/components/blocks/cartItem.vue';
+
 import { mapGetters } from 'vuex';
+import cartItems from '@/components/blocks/cartItem.vue';
 
 export default {
   name: 'header-cart',
