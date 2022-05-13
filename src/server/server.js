@@ -1,7 +1,9 @@
 const express = require('express');
 const fs = require('fs');
 const cors = require('cors');
+const path = require('path');
 const cartRouter = require('./cartRouter');
+
 
 const app = express();
 app.use(cors());
@@ -12,22 +14,24 @@ app.get('/api/products', (req, res) => {
   if (req) {
     console.log('=== Req in ===\n==============');
   }
-  fs.readFile('/brand-shop/src/server/db/catalog.json', 'utf-8', (err, data) => {
+  fs.readFile(path.join(__dirname, '/db/catalog.json'), 'utf-8', (err, data) => {
     if (err) {
       res.send(JSON.stringify({ result: 0, text: err }));
+    } else {
+      res.send(data);
     }
-    res.send(data);
   });
 });
 app.get('/api/products/:id', (req, res) => {
   if (req) {
     console.log('=== Req Prod==\n==============');
   }
-  fs.readFile('/brand-shop/src/server/db/catalog.json', 'utf-8', (err, data) => {
+  fs.readFile(path.join(__dirname, '/db/catalog.json'), 'utf-8', (err, data) => {
     if (err) {
       res.send(JSON.stringify({ result: 0, text: err }));
+    } else {
+      res.send(JSON.parse(data).find(el => el.id_product === parseInt(req.params.id, 10)));
     }
-    res.send(JSON.parse(data).find(el => el.id_product === parseInt(req.params.id, 10)));
   });
 });
 

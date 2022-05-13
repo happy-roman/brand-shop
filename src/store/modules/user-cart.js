@@ -40,10 +40,9 @@ const cartStore = {
         action = () => { find.quantity += product.quantity || 1; };
         url += `/${find.id_product}`;
       } else {
-        const prod = Object.assign({ quantity: 1 }, product);
         methodForCall = 'POST';
-        body = prod;
-        action = () => { context.state.userCart.push(prod); };
+        body = Object.assign({ quantity: 1 }, product);
+        action = () => { context.state.userCart.push(body); };
       }
       context.rootState.getFetch(url, {
         method: methodForCall,

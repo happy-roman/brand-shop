@@ -1,9 +1,10 @@
 const express = require('express');
 const fs = require('fs');
+const path = require('path');
 const handler = require('./handler');
 
 const router = express.Router();
-const cartFile = '/brand-shop/src/server/db/cart.json';
+const cartFile = path.join(__dirname, '/db/cart.json');
 
 router.get('/', (req, res) => {
   if (req) {

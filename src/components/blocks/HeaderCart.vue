@@ -2,7 +2,7 @@
   <div class="cart-block">
     <a href="#"><img class="cart" src="/img/cart.svg" alt="cart"></a>
     <div class="cart-open">
-      <div v-if="this.userCart.length === 0">
+      <div v-if="this.userCart.length === 0 || this.userCart.length === undefined">
         <p class="cart-open__empty">Your cart is empty</p>
       </div>
       <div v-else>
